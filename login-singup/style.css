@@ -1,24 +1,25 @@
 body {
     margin: 0;
     padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
     font-family: 'Jost', sans-serif;
     background-image: url(log-bg.png);
     background-size: cover;
     background-position: center;
 }
-.main{
+.main {
 	width: 40%;
-	height: 80%;
+	height: 50%;
 	background: red;
 	overflow: hidden;
-	background: -webkit-linear-gradient(top, #000000, #484968);;
+	background: -webkit-linear-gradient(top, #000000, #484968);
 	border-radius: 10px;
 	box-shadow: 5px 20px 50px #000;
-}
+	margin: 0 auto;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+  }
 .login{
 	position: relative;
 	width:100%;
@@ -41,13 +42,12 @@ body {
 }
 label{
 	color: #fff;
-	font-size: 2.3em;
+	font-size: 40px;
 	justify-content: center;
 	display: flex;
 	margin: 60px;
 	font-weight: bold;
 	cursor: pointer;
-	transition: .5s ease-in-out;
 }
 input{
 	width: 60%;
@@ -69,7 +69,7 @@ button{
 	display: block;
 	color: #fff;
 	background: #190aea;
-	font-size: 1em;
+	font-size: 17px;
 	font-weight: bold;
 	margin-top: 20px;
 	outline: none;
@@ -84,14 +84,42 @@ button:hover{
 
 .signup label{
 	color: #000000;
-	transform: scale(.6);
 }
 .login a{
     color: white;
-    font-size: .8em;
+    font-size: 13px;
 }
 .singup a{
     color: white;
-    font-size: .8em;
+    font-size: 13px;
 }
 
+@media (max-width: 600px) {
+	.main {
+	  width: 100%;
+	  height: 100%;
+	  margin: 0;
+	  padding: 0;
+	}
+	.login,
+	.signup {
+	  width: 100%;
+	  height: 100%;
+	}
+  
+	label {
+	  font-size: 20px;
+	  margin: 30px;
+	}
+  
+	input {
+	  width: 80%;
+	  height: 30px;
+	}
+  
+	button {
+	  width: 80%;
+	  height: 50px;
+	  font-size: 15px;
+	}
+  }
